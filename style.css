@@ -1,0 +1,255 @@
+*{
+    font-family: irancell;
+}
+body{
+    background-color: #E6E6E6;
+}
+section .main_content{
+    margin : 5px;
+    height: 100vh !important;
+}
+section .side_bar{
+    background-color: #F1F1F1;
+    padding: 15px;
+    width: 35vh;
+    margin: 10px;
+    border-radius: 34px;
+    height: 93vh !important;
+}
+.user_box{
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    border-radius: 20px;
+}
+.user_box img {
+    width: 59px;
+    height: 59px;
+}
+.user_text h1{
+    font-size: 15px;
+    margin: 0;
+}
+.user_text{
+    width: 85%;
+}
+.user_text span {
+    color: #A670FF;
+}
+section .seller{
+    margin-top: 15px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 16px;
+    
+}
+.seller section{
+    display: flex;
+}
+.p_seller{
+    width: 47%;
+    margin: 1.5%;
+    height: 100px;
+    border-radius: 16px;
+    background-color: #EDEDED;
+    
+}
+.full_seller{
+    margin : 1.5%;
+    background-color: #EADDFF;
+    padding: 15px;
+    border-radius: 13px;
+    width: 100%;
+    height: 40px;
+}
+.side_bar .menu{
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 16px;
+    height: 56vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+}
+ ::-webkit-scrollbar {
+   
+    border-radius: 3px;
+    width: 10px !important;
+    margin: 3px;
+}
+::-webkit-scrollbar-thumb{
+    width: 13px !important;
+    margin: 1px !important;
+    background-color: #E4E4E4;
+    border-radius: 3px;
+}
+section .content{
+    width: 80vw;
+    margin: 1.5vh;
+    height: 93vh;
+}
+.main_content{
+    display: flex;
+}
+header{
+    margin-top: 5px;
+    border-radius: 16px;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+}
+.menu_item{
+    width: 93%;
+    margin:  7.5px auto;
+    height: 3vh;
+    border-radius: 12px;
+    padding: 10px;
+    
+    text-align: center;
+}
+.side_bar .menu_item{
+    background-color: #EADDFF;
+    font-weight: bold;
+    font-family: irancell;
+}
+.menu_title{
+    width: 93%;
+    margin:  7.5px auto;
+    height: 3vh;
+    border-radius: 12px;
+    padding: 10px;
+    
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #b384ff;
+}
+.menu_item span{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+.content section{
+    height: 85vh;
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and  (max-width : 700px) {
+    header h3{
+        display: none;
+    }
+    section .side_bar{
+        right: -45vh ;
+        height: 97vh !important;
+        margin: -15px 0 0 0  !important;
+        position: absolute;
+        z-index: 999;
+        border-radius: 0 !important;
+        height: 100vh ;
+
+    }
+    section .content{
+        width : 100vh !important;
+    }
+    .menu_btn{
+        display: inline !important;
+    }
+    .menu{
+        height: 41vh !important;
+    }
+    .menu_close_btn{
+        display: inline !important;
+    }
+    .show{
+        right: 0 !important;
+        transition: 0.5s;
+        box-shadow: -1px 2px 20px 0px #0000006b;
+    }
+    .hide{
+        right: -45vh ;
+        transition: 0.5s;
+    }
+    .blur{
+        filter: blur(8px);
+    }
+    
+    .focus{
+        filter: blur(0px);
+        transition: 0.5;
+    }
+}
+@media screen and (max-width : 1300px ) and  (min-width : 700px ){
+    section .side_bar{
+        width : 45vh !important;
+    }
+    
+    .menu{
+        height: 47vh !important;
+    }
+}
+.menu_btn{
+    display: none;
+    padding : 3px;
+    background-color: #A670FF;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin : 0 auto;
+    border-radius: 3px;
+    
+    height: 40px;
+    top: 10px;
+    right: 10px;
+    position: relative;
+}
+.menu_close_btn{
+    display: none;
+    padding : 3px;
+    background-color: #A670FF;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin : 0 auto;
+    border-radius: 3px;
+    
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.right{
+    background-color: #A670FF;
+    border: #A670FF 3px inset;
+    padding: 10px;
+    border-radius: 0 13px 13px 13px;
+    position: absolute;
+    z-index: 99999;
+    display: none;
+}
+.right h1{
+    width: 10px;
+    font-size: 20px;
+}
+.right .menu_item{
+    width: 200px;
+}
+.right .menu_item{
+    background-color: #EADDFF;
+    color: black;
+}
+.right .menu_item:hover {
+    background-color: #280068 ;
+    transition: 0.3s;
+    color: white;
+}
+header h3{
+    padding: 15px;
+    width: fit-content;
+    
+}

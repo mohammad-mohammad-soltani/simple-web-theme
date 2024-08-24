@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl"  oncontextmenu="textmenu(event)">
+    <section class="main_content"  >
+        <section class="side_bar" id="side_bar" >
+            <button class="menu_close_btn" onclick="hide_menu()">close</button>
+            <div class="user_box" >
+                <div class="user_text">
+                    <h1>محمد محمد سلطانی</h1>
+                    <span>مدرس</span>
+                </div>
+                <img src="Generic avatar.png"  alt="">
+            </div>
+            <div class="seller">
+                <section>
+                    <div class="p_seller" ></div>
+                    <div class="p_seller" ></div>
+                </section>
+                <section>
+                    <div class="full_seller"></div>
+                </section>
+            </div>
+            <div class="menu">
+                <div class="menu_title"><span>لیست دوره های شما</span></div>
+                <div class="menu_item"><span>متخصص ربات تلگرام با php</span></div>
+                <div class="menu_item"><span>آموزش مقدماتی js</span></div>
+                <div class="menu_item"><span>آموزش react</span></div>
+                <div class="menu_item"><span>آموزش nodejs</span></div>
+                <div class="menu_item"><span>آموزش next js</span></div>
+                <div class="menu_item"><span>آموزش html</span></div>
+                <div class="menu_item"><span>آموزش css</span></div>
+                <div class="menu_item"><span>آموزش هوش مصنوعی</span></div>
+                <div class="menu_item"><span>آموزش پایتون</span></div>
+            </div>
+        </section>
+        <section class="content"  id="blur">
+            <header>
+                
+                <h3>قالب آموزشی</h3>
+                <div class="end"><button class="menu_btn" onclick="show_menu()">Menu</button></div>
+            </header>
+            <section>
+                <h1>محتوا</h1>
+            </section>
+        </section>
+    </section>
+    <div class="right" id="right" oncontextmenu="">
+        <div class="menu_item">خانه</div>
+        <div class="menu_item">افزودن دوره</div>
+        <div class="menu_item">لیست دوره ها</div>
+        <div class="menu_item">پروفایل</div>
+        
+    </div>
+    <script>
+        let status = "hide";
+        let f = "hide";
+        function show_menu(){
+            
+            status= "show";
+            document.getElementById("blur").classList.remove("focus")
+            document.getElementById("blur").classList.add("blur")
+            document.getElementById("side_bar").classList.remove("hide")
+            document.getElementById("side_bar").classList.add("show")
+        }
+        function hide_menu(){
+            if(status == "show"){
+                status = "hide";
+                document.getElementById("side_bar").classList.remove("show")
+                document.getElementById("side_bar").classList.add("hide")
+                document.getElementById("blur").classList.remove("blur")
+                document.getElementById("blur").classList.add("focus")
+            }
+        }
+        function click(){
+            if (status === "show"){
+                hide_menu()
+            }
+        }
+        function textmenu(e){
+            console.log(e)
+            e.preventDefault()
+            document.getElementById("right").style.left = e.layerX+"px "
+            document.getElementById("right").style.top = e.layerY+"px "
+            document.getElementById("right").style.display = "block"
+            f = "show"
+        }
+        function hide(){
+            if(f == "show"){
+                document.getElementById("right").style.display = "none"
+            }
+        }
+      document.addEventListener("click" , function (){hide();})
+    </script>
+</body>
+</html>
